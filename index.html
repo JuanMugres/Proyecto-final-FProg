@@ -2,25 +2,28 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Transportes Don Javi Corp</title>
     <script src="js/main.js"></script>
     <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
+<body id="body">
     <header>
         <h1>Transportes Don Javi S.A. de C.V.</h1>
-
+        
     </header>
-    
-    <label for="nombre">Nombre: </label>
-    <input type="text" name="nombre" id="nombre">
-
-    <label for="asiento">Numero de asiento:</label>
-    <input type="number" name="asiento" id="asiento" min="1" max="40">
-    <div id="tabla"></div>
-
+    <div id="datos">
+        <label for="nombre">Nombre: </label>
+        <input type="text" name="nombre" id="nombre"><br><br>
+        
+        <label for="asiento">Numero de asiento:</label>
+        <input type="number" name="asiento" id="asiento" min="1" max="40"><br>
+        <button onclick="generarGrafcoAsientos()">prueba</button>
+    </div>
+    <div id="grafico_asientos">
+        <div id="lado_derecho"></div>
+        <div id="lado_izquierdo"></div>
+    </div>
+    <script src="js/grafico_asientos.js"></script>
 
     
 </body>

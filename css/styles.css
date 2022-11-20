@@ -1,3 +1,12 @@
 body{
-    background-color: rgb(30, 255, 0);
+    text-align: center;
+}
+#grafico_asientos{
+    position: relative;
+}
+#lado_derecho{
+    padding-bottom: 20px;
+}
+.wrapper{
+    position: absolute;
 }
