@@ -6,23 +6,29 @@ function graficoAsientos() {
 	var asientos_lado_derecho = document.createElement("table")
 	var asientos_lado_izquierdo = document.createElement("table")
 	var cont = 4
+
 	
+
+
+
 	for (i = 0; i < 2; i++ ){
 
 		var fila = document.createElement("tr")
 
 		for(j = 0; j<10; j++){
 
-		const boton_asiento = document.createElement('button')
-		boton_asiento.setAttribute("onclick", "anadirAsiento(this.id)")
-		boton_asiento.innerHTML = cont + '<img src = "../img/asiento.png" id="imagen_asiento"/>'
-        boton_asiento.setAttribute("id", cont)
-		let celda = document.createElement("td")
-		
-		celda.appendChild(boton_asiento)
-		fila.appendChild(celda)
-		cont+=4
+			const boton_asiento = document.createElement('button')
+			boton_asiento.setAttribute("onclick", "seleccionarAsiento(this.id)")
+			boton_asiento.innerHTML = cont + '<img src = "../img/asiento.png"/>'
+        	boton_asiento.setAttribute("id", cont)
+			boton_asiento.setAttribute("style", "background-color:green")
 
+			let celda = document.createElement("td")
+			
+			celda.appendChild(boton_asiento)
+			fila.appendChild(celda)
+			cont+=4
+		
 		}
 
 		asientos_lado_derecho.appendChild(fila)
@@ -37,16 +43,19 @@ function graficoAsientos() {
 
 		for(j = 0; j<10; j++){
 
-		const boton_asiento = document.createElement('button')
-		boton_asiento.setAttribute("onclick", "anadirAsiento(this.id)")
-		boton_asiento.innerHTML = cont + '<img src = "../img/asiento.png" id="imagen_asiento"/>'
-        boton_asiento.setAttribute("id", cont)
-		let celda = document.createElement("td")
-		
-		celda.appendChild(boton_asiento)
+			const boton_asiento = document.createElement('button')
+			boton_asiento.setAttribute("onclick", "seleccionarAsiento(this.id)")
+			boton_asiento.innerHTML = cont + '<img src = "../img/asiento.png"/>'
+        	boton_asiento.setAttribute("id", cont)
 
-		fila.appendChild(celda)
-		cont+=4
+			boton_asiento.setAttribute("style", "background-color:green")
+
+			let celda = document.createElement("td")
+			
+			celda.appendChild(boton_asiento)
+
+			fila.appendChild(celda)
+			cont+=4
 
 		}
 
@@ -58,6 +67,19 @@ function graficoAsientos() {
 
 	document.getElementById("lado_derecho").appendChild(asientos_lado_derecho)
 	document.getElementById("lado_izquierdo").appendChild(asientos_lado_izquierdo)
+
+
+	for(i = 1; i<41;i++){
+		
+
+		if(localStorage.getItem(String("estatus_asiento_"+i)) == "reservado"){
+			document.getElementById(String(i)).setAttribute("style", "background-color:red")
+		}
+
+
+		
+	}
+	
 
 
 

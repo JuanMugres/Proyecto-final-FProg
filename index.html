@@ -12,19 +12,30 @@
         
     </header>
     <div id="datos">
-        <label for="nombre">Nombre: </label>
-        <input type="text" name="nombre" id="nombre"><br><br>
-        
-        <label for="asiento">Numero de asiento:</label>
-        <input type="number" name="asiento" id="asiento" min="1" max="40"><br>
-        <button onclick="generarGrafcoAsientos()">prueba</button>
+        <form>
+
+            <label for="nombre">Nombre: </label>
+            <input type="text" name="nombre" id="nombre">
+            <p id="alerta_nombre"></p>
+            
+            <label for="asiento">Numero de asiento:</label>
+            <input type="number" name="asiento" id="asiento" min="1" max="40">
+            <p id="alerta_asiento"></p>
+    
+            <p>Escriba el numero del asiento que desea comprar o haga click sobre el.</p>
+            
+            <input type="submit" value="Reservar" onclick="reservar()">
+            <input type="submit" value="Eliminar reservacion" onclick="modificar()">
+            
+        </form>
     </div>
+    
     <div id="grafico_asientos">
         <div id="lado_derecho"></div>
         <div id="lado_izquierdo"></div>
     </div>
     <script src="js/grafico_asientos.js"></script>
 
-    
+    <button onclick="pruebas()">pruebas</button>
 </body>
 </html>
