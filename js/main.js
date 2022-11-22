@@ -14,6 +14,10 @@ function reservar(){
 	var asiento  = parseInt(document.getElementById("asiento").value)
 	let valido = true
 	//validar que los datos sean correctos, de no serlo, hacerlo saber al usuario
+	if(localStorage.getItem("dueno_asiento_"+ asiento) != null && localStorage.getItem("estatus_asiento_"+ asiento) ){
+		alert("El asiento que escogió está ocupado, escoja uno diferente")
+	}
+
 	if(nombre == null || nombre.length == 0 || /^\s+$/.test(nombre)){
 		document.getElementById("alerta_nombre").innerText = "El campo de nombre es obligatorio"
 		valido = false
@@ -42,6 +46,7 @@ function eliminar(){
 	var nombre = String(document.getElementById("nombre").value)
 	var asiento  = parseInt(document.getElementById("asiento").value)
 	let valido = true
+
 	if(nombre == null || nombre.length == 0 || /^\s+$/.test(nombre)){
 		document.getElementById("alerta_nombre").innerText = "El campo de nombre es obligatorio"
 		valido = false
