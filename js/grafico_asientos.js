@@ -19,7 +19,7 @@ function graficoAsientos() {
 
 			const boton_asiento = document.createElement('button')
 			boton_asiento.setAttribute("onclick", "seleccionarAsiento(this.id)")
-			boton_asiento.innerHTML = cont + '<img src = "../img/asiento.png"/>'
+			boton_asiento.innerHTML = cont + '<img src = "./img/asiento.png"/>'
         	boton_asiento.setAttribute("id", cont)
 			boton_asiento.setAttribute("style", "background-color:green")
 
@@ -45,7 +45,7 @@ function graficoAsientos() {
 
 			const boton_asiento = document.createElement('button')
 			boton_asiento.setAttribute("onclick", "seleccionarAsiento(this.id)")
-			boton_asiento.innerHTML = cont + '<img src = "../img/asiento.png"/>'
+			boton_asiento.innerHTML = cont + '<img src = "./img/asiento.png"/>'
         	boton_asiento.setAttribute("id", cont)
 
 			boton_asiento.setAttribute("style", "background-color:green")
@@ -77,7 +77,7 @@ function graficoAsientos() {
 		}
 
 
-		
+
 	}
 	
 
