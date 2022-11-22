@@ -26,7 +26,7 @@ function reservar(){
 
 	if(valido){
 		alert("kk")
-		localStorage.setItem("dueño_asiento_"+asiento, nombre)
+		localStorage.setItem("dueno_asiento_"+asiento, nombre)
 		localStorage.setItem("estatus_asiento_"+asiento, "reservado")
 		document.getElementById(String(asiento)).setAttribute("style", "background-color:red")
 
@@ -37,15 +37,33 @@ function reservar(){
 
 
 }
-//funcion para modificar una reservacion
-function modificar(){
+//funcion para eliminar una reservacion
+function eliminar(){
+	var nombre = String(document.getElementById("nombre").value)
+	var asiento  = parseInt(document.getElementById("asiento").value)
+	let valido = true
+	if(nombre == null || nombre.length == 0 || /^\s+$/.test(nombre)){
+		document.getElementById("alerta_nombre").innerText = "El campo de nombre es obligatorio"
+		valido = false
+	}
+	if(isNaN(asiento)){
+		document.getElementById("alerta_asiento").innerText = "Por favor ingrese un numero de asiento valido"
+		valido = false
+		
+	}
+	if(valido){
+		alert("kk")
+		localStorage.setItem("dueno_asiento_"+asiento, null)
+		localStorage.setItem("estatus_asiento_"+asiento, null)
+		document.getElementById(String(asiento)).setAttribute("style", "background-color:green")
 
+	}
 
 
 }
 // funcion para probar código experimental
 function pruebas(){
-	localStorage.clear()
+	localStorage.clear
 }
 
 
