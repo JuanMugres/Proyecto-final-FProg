@@ -2,8 +2,10 @@ body{
     text-align: center;
 }
 
-
-
+#grafico_asientos{
+    display: flex;
+    justify-content: center
+}
 
 
 
@@ -18,8 +20,4 @@ body{
 }
 .wrapper{
     position: absolute;
-}
-#grafico_asientos{
-    display: flex;
-    justify-content: center
 }
