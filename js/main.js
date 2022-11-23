@@ -29,10 +29,11 @@ function reservar(){
 	}
 
 	if(valido){
-		alert("kk")
 		localStorage.setItem("dueno_asiento_"+asiento, nombre)
 		localStorage.setItem("estatus_asiento_"+asiento, "reservado")
 		document.getElementById(String(asiento)).setAttribute("style", "background-color:red")
+		document.getElementById("nombre").value = null
+		document.getElementById("asiento").value = null
 
 	}
 
@@ -57,7 +58,6 @@ function eliminar(){
 		
 	}
 	if(valido){
-		alert("kk")
 		localStorage.setItem("dueno_asiento_"+asiento, null)
 		localStorage.setItem("estatus_asiento_"+asiento, null)
 		document.getElementById(String(asiento)).setAttribute("style", "background-color:green")
@@ -68,7 +68,7 @@ function eliminar(){
 }
 // funcion para probar código experimental
 function pruebas(){
-	localStorage.clear
+	localStorage.clear()
 }
 
 
