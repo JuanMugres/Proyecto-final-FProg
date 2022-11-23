@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Transportes Don Javi Corp</title>
+  <link rel="stylesheet" href="css/awesomplete.base.css">
+  <link rel="stylesheet" href="css/awesomplete.theme.css">
+  <script src="js/main.js"></script>
+</head>
+<body>
+  <h1>Transportes Don Javi S.A. de C.V.</h1>
+        
+        <br>
+        <label for="nombre">Selecciona tu destino</label>
+        <br><br>
+        <input
+            class="awesomplete"
+            type="text"
+            id="nombre"
+            autocomplete="off"
+            placeholder="A donde deseas viajar"
+            data-list="Colima Col., Mazanillo Col., Gdl Jalisco, Tijuana BC."
+            data-minChars="1">
+
+  <script type="text/javascript" src="js/awesomplete.min.js"></script>
+  <button onclick="ir_reservacion()">Reservar</button>
+  
+</body>
+</html>

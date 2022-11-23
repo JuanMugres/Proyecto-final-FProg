@@ -11,37 +11,40 @@
         IMPORTANTE
         no modificar atributos id
      -->
-    <header>
-        <h1>Transportes Don Javi S.A. de C.V.</h1>
-        
-    </header>
-    <div id="datos">
-
-        <label for="nombre">Nombre: </label>
-        <input type="text" name="nombre" id="nombre">
-        <p id="alerta_nombre"></p>
-        
-        <label for="asiento">Numero de asiento:</label>
-        <input type="number" name="asiento" id="asiento" min="1" max="40">
-        <p id="alerta_asiento"></p>
-
-        <p>Escriba el numero del asiento que desea comprar o haga click sobre el.</p>
-        
-        <button onclick="reservar()">Reservar</button>
-        <button onclick="eliminar()">Eliminar reservacion</button>
-
-            
+    <header><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <div class="javititulo">
+            <h1>Transportes Don Javi S.A. de C.V.</h1>
+        </div>
+    </header><br><br><br><br><br><br><br><br><br><br><br><br>
+    <div class="book_box">
+        <h2>Escriba el numero del asiento que desea comprar o haga click sobre el</h2>
+        <form>
+            <div id="datos">
+                <div class="user_box">
+                    <input type="text" name="nombre" id="nombre" required="">
+                    <label for="nombre">Nombre </label>
+                    <p id="alerta_nombre"></p>
+                </div>
+                <div class="user_box">
+                    <input type="number" name="asiento" id="asiento" min="1" max="40" required="">
+                    <label for="asiento">Numero de asiento:</label>
+                    <p id="alerta_asiento"></p>
+                </div>
+                <div class="button_form">
+                    <button id="submit" onclick="reservar()" href="#" >Reservar </button>
+                    <button id="submit" onclick="eliminar()" href="#" >Eliminar reservacion</button>  
+                </div>
+            </div>
+        </form>    
     </div>
-    
     <div id="grafico_asientos">
         <div>
             <div id="lado_derecho"></div>
             <div id="lado_izquierdo"></div>
-            
         </div>
     </div>
     <script src="js/grafico_asientos.js"></script>
 
-    <button onclick="pruebas()">pruebas</button>
+    <button onclick="pruebas()">pruebas</button><br><br>
 </body>
 </html>
