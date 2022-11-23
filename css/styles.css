@@ -19,3 +19,7 @@ body{
 .wrapper{
     position: absolute;
 }
+#grafico_asientos{
+    display: flex;
+    justify-content: center
+}
