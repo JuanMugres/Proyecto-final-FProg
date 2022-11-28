@@ -1,0 +1,2 @@
+document.getElementsByName("Durango").setAttribute("fill", "red") //Debería agregar los atributos fill=red al elemento de durango, marcando de rojo al estado, pero no lo hace.
+// fill="red" es un atributo que llena de color al elemento
