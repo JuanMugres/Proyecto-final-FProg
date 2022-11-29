@@ -38,9 +38,6 @@ function reservar(){
 	}
 
 
-
-
-
 }
 //funcion para eliminar una reservacion
 function eliminar(){

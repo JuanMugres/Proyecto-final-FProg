@@ -7,10 +7,6 @@ function graficoAsientos() {
 	var asientos_lado_izquierdo = document.createElement("table")
 	var cont = 4
 
-	
-
-
-
 	for (i = 0; i < 2; i++ ){
 
 		var fila = document.createElement("tr")
@@ -71,17 +67,10 @@ function graficoAsientos() {
 
 	for(i = 1; i<41;i++){
 		
-
 		if(localStorage.getItem(String("estatus_asiento_"+i)) == "reservado"){
 			document.getElementById(String(i)).setAttribute("style", "background-color:red")
 		}
-
-
-
 	}
 	
-
-
-
 }
 graficoAsientos()
