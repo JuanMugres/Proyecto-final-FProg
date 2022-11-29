@@ -31,7 +31,7 @@ function reservar(){
 	if(valido){
 		localStorage.setItem("dueno_asiento_"+asiento, nombre)
 		localStorage.setItem("estatus_asiento_"+asiento, "reservado")
-		document.getElementById(String(asiento)).setAttribute("style", "background-color:red")
+		document.getElementById(String(asiento)).setAttribute("style", "background-color:red; border-radius:8px")
 		document.getElementById("nombre").value = null
 		document.getElementById("asiento").value = null
 
@@ -57,7 +57,7 @@ function eliminar(){
 	if(valido){
 		localStorage.setItem("dueno_asiento_"+asiento, null)
 		localStorage.setItem("estatus_asiento_"+asiento, null)
-		document.getElementById(String(asiento)).setAttribute("style", "background-color:#8F7CEC")
+		document.getElementById(String(asiento)).setAttribute("style", "background-color:#8F7CEC; border-radius:8px")
 
 	}
 
@@ -67,12 +67,11 @@ function eliminar(){
 function pruebas(){
 	localStorage.clear()
 }
-
+function ir_reservacion(){
+	window.location.href="index.html"
+}
 
 
 
 //Al presionar el botón el programa intentará realizar la reservación, si el lugar esta disponible se realizará la reservación, 
 //pero si el lugar está ocupado el programa mostrará un mensaje indicando que el lugar ya está ocupado y deberá seleccionar otro lugar.
-function ir_reservacion(){
-	window.location.href="index.html"
-}
