@@ -14,19 +14,20 @@
   <h1>Transportes Don Javi S.A. de C.V.</h1>
         
         <br>
-        <label for="nombre">Selecciona tu destino</label>
+        <label for="destinos">Selecciona tu destino</label>
         <br><br>
         <input
         class="awesomplete"
             type="text"
-            id ="nombre"
+            id ="destinos"
             autocomplete="off"
             placeholder="A donde deseas viajar"
             data-list="Baja California, Baja California Sur, Coahuila, Chihuahua, Durango, Sinaloa, Sonora, Zacatecas, Nuevo León, San Luis Potosí, Tamaulipas, Aguascalientes, Colima, Jalisco, Michoacán, Nayarit, Campeche, Oaxaca, Puebla, Tabasco, Tlaxcala, Distrito Federal, Guanajuato, Guerrero, Hidalgo, México, Morelos, Querétaro, Veracruz, Chiapas, Quintana Roo, Yucatán"
             data-minChars="1">
+            <p id="alerta_destinos"></p>
 
   <script type="text/javascript" src="js/awesomplete.min.js"></script>
-  <button onclick="ir_reservacion()">Reservar</button>
+  <button onclick="validarhome()">Reservar</button>
   <script src="js/Mapa.js"></script>
 
   <div>
