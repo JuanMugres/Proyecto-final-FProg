@@ -17,7 +17,7 @@ function graficoAsientos() {
 			boton_asiento.setAttribute("onclick", "seleccionarAsiento(this.id)")
 			boton_asiento.innerHTML = cont + '<img src = "./img/asiento.png"/>'
         	boton_asiento.setAttribute("id", cont)
-			boton_asiento.setAttribute("style", "background-color:#8F7CEC")
+			boton_asiento.setAttribute("style", "background-color:#8F7CEC; border-radius:8px")
 
 			let celda = document.createElement("td")
 			
@@ -44,7 +44,7 @@ function graficoAsientos() {
 			boton_asiento.innerHTML = cont + '<img src = "./img/asiento.png"/>'
         	boton_asiento.setAttribute("id", cont)
 
-			boton_asiento.setAttribute("style", "background-color:#8F7CEC")
+			boton_asiento.setAttribute("style", "background-color:#8F7CEC; border-radius:8px")
 
 			let celda = document.createElement("td")
 			
@@ -68,7 +68,7 @@ function graficoAsientos() {
 	for(i = 1; i<41;i++){
 		
 		if(localStorage.getItem(String("estatus_asiento_"+i)) == "reservado"){
-			document.getElementById(String(i)).setAttribute("style", "background-color:red")
+			document.getElementById(String(i)).setAttribute("style", "background-color:red; border-radius:8px")
 		}
 	}
 	
