@@ -18,6 +18,12 @@ function graficoAsientos() {
 			boton_asiento.innerHTML = cont + '<img src = "./img/asiento.png"/>'
         	boton_asiento.setAttribute("id", cont)
 			boton_asiento.setAttribute("style", "background-color:#8F7CEC; border-radius:8px")
+			
+
+			if(!(localStorage.getItem("dueno_asiento_"+cont)==null)){
+				boton_asiento.setAttribute("title", localStorage.getItem("dueno_asiento_"+cont))
+
+			}
 
 			let celda = document.createElement("td")
 			
@@ -46,6 +52,11 @@ function graficoAsientos() {
 
 			boton_asiento.setAttribute("style", "background-color:#8F7CEC; border-radius:8px")
 
+			if(!(localStorage.getItem("dueno_asiento_"+cont)==null)){
+				boton_asiento.setAttribute("title", localStorage.getItem("dueno_asiento_"+cont))
+
+			}
+			
 			let celda = document.createElement("td")
 			
 			celda.appendChild(boton_asiento)
