@@ -31,7 +31,6 @@ function reservar(){
 	if(valido){
 		localStorage.setItem("dueno_asiento_"+asiento, nombre)
 		localStorage.setItem("estatus_asiento_"+asiento, "reservado")
-
 		document.getElementById(String(asiento)).setAttribute("style", "background-color:red; border-radius:8px")
 		document.getElementById(String(asiento)).setAttribute("title", nombre)
 
@@ -42,7 +41,6 @@ function reservar(){
 
 
 }
-
 //funcion para eliminar una reservacion
 function eliminar(){
 	var nombre = String(document.getElementById("nombre").value)
@@ -59,22 +57,16 @@ function eliminar(){
 		
 	}
 
-	if(!(nombre == "") && nombre != localStorage.getItem("dueno_asiento_"+asiento)){
-		document.getElementById("alerta_nombre").innerText = "Solo el dueño del asiento puede eliminar la reservacion"
-		valido = false
-	}
-
-
-	if(valido == true && nombre == localStorage.getItem("dueno_asiento_"+asiento)){
+	if(valido){
 		localStorage.setItem("dueno_asiento_"+asiento, null)
 		localStorage.setItem("estatus_asiento_"+asiento, null)
 		document.getElementById(String(asiento)).setAttribute("style", "background-color:#8F7CEC; border-radius:8px")
-		document.getElementById(String(asiento)).setAttribute("title", "")
+		document.getElementById(String(asiento)).setAttribute("title", "nombre")
 
 
 	}
-	
-	
+
+
 }
 // funcion para probar código experimental
 function pruebas(){
