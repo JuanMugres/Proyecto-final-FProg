@@ -15,7 +15,7 @@ function reservar(){
 	let valido = true
 	//validar que los datos sean correctos, de no serlo, hacerlo saber al usuario
 	if(localStorage.getItem("dueno_asiento_"+ asiento) != null ){
-		alert("El asiento que escogió está ocupado, escoja uno diferente")
+		alert("El asiento que escogió está ocupado, escoja uno diferente") 
 		valido = false
 	}
 
@@ -48,7 +48,7 @@ function eliminar(){
 	var asiento  = parseInt(document.getElementById("asiento").value)
 	let valido = true
 	if(nombre != localStorage.getItem("dueno_asiento_"+asiento)){
-		document.getElementById("alerta_nombre").innerText = "Solo el dueño del asiento puede eliminar la reservacion"
+		alert("Solo el dueño del asiento puede eliminar la reservacion")
 		valido = false
 	}
 
