@@ -56,7 +56,7 @@ function validarhome() {
       valido = false;
     } else {
       document.getElementById("alerta_destinos").innerText =
-        "Debes de elegir un estado de la república mexicana";
+        "Debes elegir un estado de la república mexicana";
     }
   }
 }
