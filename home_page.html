@@ -13,10 +13,12 @@
   
 </head>
 <body>
+  <div class="javi_titulo">
   <h1>Transportes Don Javi S.A. de C.V.</h1>
         
         <br>
         <label for="destinos">Selecciona tu destino en el mapa o escribe tu destino y presiona enter al final</label>
+        </div>
         <br><br>
         <input onkeypress="marcarmapa()"
         class="awesomplete"
@@ -29,9 +31,10 @@
             <p id="alerta_destinos"></p>
 
   <script type="text/javascript" src="js/awesomplete.min.js"></script>
+  
   <button onclick="validarhome()">Reservar</button>
   <script src="js/Mapa.js"></script>
-
+ 
   <div>
     <svg baseprofile="tiny" height="631" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" version="1.2" viewbox="0 0 1000 631" width="800" xmlns="http://www.w3.org/2000/svg">
     <path onclick="seleccionarDestino(this.id)" name="path" d="M901.9 362.5l0 0.2-0.2-0.1-0.3 0.1 0.3-0.2 0.2 0z m2.8 0.4l1.1 0.9 1 1.5 0.5 1.2-0.4 1.8-0.4 1-0.5 0.4-0.4-0.1-0.6-0.3-0.3-0.3 0.1-0.4-0.3-0.6 0.2-0.2 0.5-0.2 0.6-0.6 0.1-0.8-0.6-0.7-0.4-0.5-0.1-0.8-0.8-0.4-0.7-0.3-0.6 0.2-0.2 0.5-0.3-0.1 0.2-0.5 0.3-0.5 0.3-0.5 0.5-0.2 1.2 0.5z"  id="">
