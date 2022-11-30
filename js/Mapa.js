@@ -42,7 +42,6 @@ var listado = [
 
 function validarhome() {
   var destinos = String(document.getElementById("destinos").value);
-  //var asiento  = parseInt(document.getElementById("asiento").value)
   let valido = true;
   //validar que los datos sean correctos, de no serlo, hacerlo saber al usuario
 
@@ -70,6 +69,3 @@ function marcarmapa() {
     document.getElementById(id).setAttribute("style", "fill: red");
   }
 }
-
-//Debería agregar los atributos fill=red al elemento de durango, marcando de rojo al estado, pero no lo hace.
-// fill="red" es un atributo que llena de color al elemento
