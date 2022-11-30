@@ -73,7 +73,7 @@ function pruebas(){
 	localStorage.clear()
 }
 function ir_reservacion(){
-	window.location.href="index.html"
+	window.location.href="reservar.html"
 }
 
 
